@@ -1,0 +1,103 @@
+/* ============================================================
+   animations.css — cascading page transitions & micro-motion
+   ============================================================ */
+
+/* Page-load cascade: children with [data-rise] reveal in sequence */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes popIn {
+  from { opacity:0; transform: scale(.92) translateY(12px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity:0; transform: translateX(-24px); }
+  to   { opacity:1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity:0; transform: translateX(24px); }
+  to   { opacity:1; transform: translateX(0); }
+}
+
+/* Cascade utility — each direct child animates with an increasing delay */
+.cascade > * {
+  opacity: 0;
+  animation: rise .5s var(--ease) forwards;
+  will-change: opacity, transform;
+}
+.cascade > *:nth-child(1)  { animation-delay: .05s; }
+.cascade > *:nth-child(2)  { animation-delay: .12s; }
+.cascade > *:nth-child(3)  { animation-delay: .19s; }
+.cascade > *:nth-child(4)  { animation-delay: .26s; }
+.cascade > *:nth-child(5)  { animation-delay: .33s; }
+.cascade > *:nth-child(6)  { animation-delay: .40s; }
+.cascade > *:nth-child(7)  { animation-delay: .47s; }
+.cascade > *:nth-child(8)  { animation-delay: .54s; }
+.cascade > *:nth-child(n+9) { animation-delay: .60s; }
+
+/* Whole-view fade used between pages */
+.view-enter { animation: rise .42s var(--ease) both; }
+
+/* Shimmer skeleton loaders */
+.skeleton {
+  position: relative; overflow: hidden;
+  background: var(--surface); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-in);
+}
+.skeleton::after {
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.75) 50%, transparent 100%);
+  transform: translateX(-100%);
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+
+/* Spinner */
+.spinner {
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 3px solid rgba(150,160,185,.25);
+  border-top-color: var(--accent);
+  animation: spin .75s linear infinite; margin: 18px auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Stat card count-up pulse */
+@keyframes countPop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+.stat-val.popped { animation: countPop .35s var(--ease); }
+
+/* Sidebar active marker */
+@keyframes markerIn {
+  from { height: 0; opacity: 0; }
+  to   { height: 60%; opacity: 1; }
+}
+.nav a.active::after { animation: markerIn .3s var(--ease) both; }
+
+/* Button ripple */
+.btn { overflow: hidden; }
+.btn .ripple {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  transform: scale(0); pointer-events: none;
+  animation: rippleOut .55s var(--ease) forwards;
+}
+@keyframes rippleOut {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* Page-enter for auth card */
+.auth-card { animation: popIn .55s var(--ease) both; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

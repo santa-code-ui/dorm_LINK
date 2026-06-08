@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register · dorm_LINK</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/neumorphism.css">
+  <link rel="stylesheet" href="../../css/glassmorphism.css">
+  <link rel="stylesheet" href="../../css/forms.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/dashboard.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body data-page="signup">
+  <div class="auth-wrap">
+    <div class="auth-brand"><div class="logo">dorm<span class="link">_LINK</span></div><p>Campus Oriented Hostel Manager · USTM</p></div>
+    <div class="auth-card glass" style="max-width:560px">
+      <h2 style="text-align:center;margin-bottom:6px">Create your student account</h2>
+      <p class="text-soft" style="text-align:center;margin-bottom:18px;font-size:.88rem">Fill in your details to register.</p>
+      <form id="signupForm" novalidate>
+        <div class="grid-2">
+          <div class="field"><label>Full Name</label><input class="input" name="fullName" placeholder="Samboraa Borgohain"></div>
+          <div class="field"><label>Roll Number</label><input class="input" name="rollNo" placeholder="USTM2024CS010"></div>
+        </div>
+        <div class="grid-2">
+          <div class="field"><label>Course</label>
+            <select class="input" name="course"><option value="">Select course</option></select></div>
+          <div class="field"><label>Date of Birth</label><input class="input" type="date" name="dob"></div>
+        </div>
+        <div class="grid-2">
+          <div class="field"><label>Email</label><input class="input" type="email" name="email" placeholder="you@ustm.ac.in"></div>
+          <div class="field"><label>Phone</label><input class="input" name="phone" placeholder="+91 ..."></div>
+        </div>
+        <div class="field"><label>Gender</label>
+          <select class="input" name="gender"><option value="MALE">Male</option><option value="FEMALE">Female</option><option value="OTHER">Other</option></select></div>
+        <div class="field"><label>Address</label><textarea class="input" name="address" placeholder="Permanent address"></textarea></div>
+        <div class="grid-2">
+          <div class="field"><label>Password</label>
+            <div class="pw-wrap"><input class="input" type="password" name="password" placeholder="min 6 characters"><span class="pw-eye"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></span></div></div>
+          <div class="field"><label>Confirm Password</label>
+            <div class="pw-wrap"><input class="input" type="password" name="confirm" placeholder="re-type password"><span class="pw-eye"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></span></div></div>
+        </div>
+        <button class="btn btn-primary chameleon" type="submit" style="width:100%">Create account</button>
+      </form>
+      <div class="auth-switch">Already registered? <a href="signin.html">Sign in</a></div>
+    </div>
+  </div>
+  <script src="../../js/auth.js"></script>
+</body>
+</html>

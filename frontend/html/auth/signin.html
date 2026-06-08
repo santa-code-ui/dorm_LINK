@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in · dorm_LINK</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/neumorphism.css">
+  <link rel="stylesheet" href="../../css/glassmorphism.css">
+  <link rel="stylesheet" href="../../css/forms.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/dashboard.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body data-page="signin">
+  <div class="auth-wrap">
+    <div class="auth-brand"><div class="logo">dorm<span class="link">_LINK</span></div><p>Campus Oriented Hostel Manager · USTM</p></div>
+    <div class="auth-card glass">
+      <div class="role-switch" data-role="STUDENT">
+        <div class="role active" data-role="STUDENT"><span>●</span> Student</div>
+        <div class="role" data-role="ADMIN"><span>●</span> Admin</div>
+      </div>
+      <form id="signinForm" novalidate>
+        <div class="field">
+          <label>Roll No. / Username</label>
+          <input class="input" name="identifier" placeholder="USTM2024CS001 or admin" autocomplete="username">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <div class="pw-wrap">
+            <input class="input" type="password" name="password" placeholder="••••••••" autocomplete="current-password">
+            <span class="pw-eye"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          </div>
+        </div>
+        <a class="forgot-link" href="forgot_password.html">Forgot password? Click here to reset</a>
+        <button class="btn btn-primary chameleon" type="submit" style="width:100%">Sign in</button>
+      </form>
+      <div class="lost-link">Feels like you're lost. <a href="signup.html">Please sign-in first.</a></div>
+    </div>
+  </div>
+  <script src="../../js/auth.js"></script>
+</body>
+</html>

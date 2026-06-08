@@ -1,0 +1,28 @@
+# Build output
+build/
+out/
+target/
+*.class
+*.war
+
+# Dependencies (place the MySQL connector in WEB-INF/lib at deploy time)
+libs/*.jar
+
+# Local config overrides
+backend/config/db.local.properties
+
+# Uploaded runtime content (keep the folders, ignore the files)
+uploads/student_photos/*
+uploads/receipts/*
+uploads/hostel_images/*
+!uploads/**/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

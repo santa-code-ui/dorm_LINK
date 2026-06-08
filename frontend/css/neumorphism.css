@@ -1,0 +1,85 @@
+/* ============================================================
+   neumorphism.css — soft extruded UI components
+   ============================================================ */
+
+/* Inset field wells */
+.nm-well {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-in);
+  padding: 14px 16px;
+}
+
+/* Raised circular icon button (top bar, pagination, etc.) */
+.nm-icon {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--surface); color: var(--ink-soft);
+  box-shadow: var(--shadow-out-sm); border: none; cursor: pointer;
+  transition: box-shadow .18s var(--ease), color .2s, transform .18s var(--ease);
+}
+.nm-icon:hover { color: var(--accent); transform: translateY(-1px); }
+.nm-icon:active { box-shadow: var(--shadow-in); }
+
+/* Stat card */
+.stat {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-out);
+  padding: 20px 22px;
+  display: flex; flex-direction: column; gap: 6px;
+  position: relative; overflow: hidden;
+}
+.stat .stat-ico {
+  width: 46px; height: 46px; border-radius: 14px;
+  display: grid; place-items: center; margin-bottom: 6px;
+  box-shadow: var(--shadow-in); font-size: 1.2rem;
+}
+.stat .stat-val { font-size: 2rem; font-weight: 800; letter-spacing: -1px; }
+.stat .stat-lbl { color: var(--ink-faint); font-size: .82rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .5px; }
+.stat::after {
+  content:""; position:absolute; right:-30px; top:-30px;
+  width: 110px; height: 110px; border-radius: 50%;
+  background: var(--cham); background-size: 200% 200%;
+  opacity: .10; filter: blur(2px); animation: chamShift 7s linear infinite;
+}
+
+/* Neumorphic toggle */
+.nm-toggle { position: relative; width: 56px; height: 30px; display:inline-block; }
+.nm-toggle input { display:none; }
+.nm-toggle .track {
+  position:absolute; inset:0; border-radius: 999px;
+  background: var(--surface); box-shadow: var(--shadow-in);
+  transition: .3s;
+}
+.nm-toggle .knob {
+  position:absolute; top:3px; left:3px; width:24px; height:24px; border-radius:50%;
+  background: var(--surface); box-shadow: var(--shadow-out-sm);
+  transition: .3s var(--ease);
+}
+.nm-toggle input:checked + .track { background: var(--cham); background-size:200% 200%; }
+.nm-toggle input:checked + .track + .knob { transform: translateX(26px); }
+
+/* Segmented control */
+.nm-seg {
+  display:inline-flex; background: var(--surface);
+  border-radius: 999px; box-shadow: var(--shadow-in); padding: 5px;
+}
+.nm-seg button {
+  border:none; background:transparent; cursor:pointer;
+  padding: 8px 18px; border-radius: 999px; font-weight:600; color: var(--ink-soft);
+  font-family: var(--font); transition:.2s;
+}
+.nm-seg button.active {
+  color: var(--ink); background: var(--surface); box-shadow: var(--shadow-out-sm);
+}
+
+/* Avatar */
+.avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  display:grid; place-items:center; font-weight:700; color:#fff;
+  background: var(--cham); background-size: 200% 200%;
+  box-shadow: var(--shadow-out-sm); animation: chamShift 8s linear infinite;
+}
+.avatar.lg { width: 84px; height: 84px; font-size: 1.6rem; }

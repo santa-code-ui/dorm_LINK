@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooms · dorm_LINK</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/neumorphism.css">
+  <link rel="stylesheet" href="../../css/glassmorphism.css">
+  <link rel="stylesheet" href="../../css/forms.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/dashboard.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body data-role="ADMIN" data-page="admin-rooms">
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="dot"></span><div>dorm<span class="link">_LINK</span>
+        <div class="org">USTM · Admin Portal</div></div></div>
+      <nav class="nav">
+      <a href="dashboard.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg><span>Dashboard</span></a>
+      <a href="courses.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg><span>Courses</span></a>
+      <a href="rooms.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 14h18M3 18v2M21 18v2"/><path d="M7 10V7h6v3"/></svg><span>Rooms</span></a>
+      <a href="room_requests.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4a1 1 0 0 1 1-1h11v18M16 3l4 2v16h-4"/><circle cx="13" cy="12" r="1"/></svg><span>Room Requests</span></a>
+      <a href="students.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 19c0-3 3-5 6-5s6 2 6 5"/><path d="M16 6a3 3 0 0 1 0 6"/></svg><span>Manage Students</span></a>
+      <a href="announcements.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l9 5V5L6 10H4a1 1 0 0 0-1 1z"/><path d="M18 8a5 5 0 0 1 0 8"/></svg><span>Announcements</span></a>
+      <a href="fee_clearance.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10M7 8h10M7 4c5 0 6 8 0 8h2l6 8"/></svg><span>Fee Clearances</span></a>
+      <a href="reports.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>Reports</span></a>
+      <a href="profile.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg><span>Profile</span></a>
+      </nav>
+      <a href="#" class="logout" data-logout><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg><span>Sign out</span></a>
+    </aside>
+    <div class="main">
+      <header class="topbar glass">
+        <button class="menu-toggle nm-icon" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="page-title">Rooms</div>
+        <div class="tb-right">
+          <div class="who"></div>
+          <div class="avatar">U</div>
+        </div>
+      </header>
+      <main class="content cascade">
+        <div class="section-head"><h1>Rooms</h1>
+          <button class="btn btn-primary chameleon" id="addRoomBtn">+ Add room</button></div>
+        <div class="panel">
+          <div class="table-wrap"><table>
+            <thead><tr><th>Room</th><th>Hostel</th><th>Type</th><th>Capacity</th><th>Occupied</th><th>Rent</th><th>Status</th></tr></thead>
+            <tbody id="roomsBody"></tbody>
+          </table></div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../../js/dashboard.js"></script>
+  <script src="../../js/room.js"></script>
+</body>
+</html>

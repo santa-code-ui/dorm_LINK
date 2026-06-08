@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard · dorm_LINK</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/neumorphism.css">
+  <link rel="stylesheet" href="../../css/glassmorphism.css">
+  <link rel="stylesheet" href="../../css/forms.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/dashboard.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body data-role="STUDENT" data-page="student-dashboard">
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="dot"></span><div>dorm<span class="link">_LINK</span>
+        <div class="org">USTM · Student Portal</div></div></div>
+      <nav class="nav">
+      <a href="dashboard.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg><span>Dashboard</span></a>
+      <a href="book_hostel.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 3v18"/></svg><span>Book Hostel</span></a>
+      <a href="room_details.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 14h18M3 18v2M21 18v2"/><path d="M7 10V7h6v3"/></svg><span>Room Details</span></a>
+      <a href="mess_menu.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Mess Menu</span></a>
+      <a href="entry_exit_log.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z"/></svg><span>Entry / Exit</span></a>
+      <a href="complaints.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h5l2 3h4l2-3h5"/><path d="M3 12V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/></svg><span>Complaints</span></a>
+      <a href="fees.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10M7 8h10M7 4c5 0 6 8 0 8h2l6 8"/></svg><span>Fees</span></a>
+      <a href="receipts.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2-1 2 1 2-1 2 1 2-1 2 1V3l-2 1-2-1-2 1-2-1-2 1z"/><path d="M8 8h8M8 12h8"/></svg><span>Receipts</span></a>
+      <a href="profile.html"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg><span>Profile</span></a>
+      </nav>
+      <a href="#" class="logout" data-logout><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg><span>Sign out</span></a>
+    </aside>
+    <div class="main">
+      <header class="topbar glass">
+        <button class="menu-toggle nm-icon" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="page-title">Dashboard</div>
+        <div class="tb-right">
+          <div class="who"></div>
+          <div class="avatar">U</div>
+        </div>
+      </header>
+      <main class="content cascade">
+        <div class="welcome glass">
+          <h1>WELCOME <span class="text-soft" style="font-weight:600;font-size:1.1rem">to</span></h1>
+          <p>University of Science and Technology, Meghalaya</p>
+        </div>
+        <div class="section-head" style="margin-top:24px"><h1>Quick information</h1></div>
+        <div class="info-pills" id="quickInfo"></div>
+        <div class="section-head" style="margin-top:28px"><h1>Announcements</h1></div>
+        <div class="panel glass"><div class="ann-ticker"></div></div>
+      </main>
+    </div>
+  </div>
+  <script src="../../js/dashboard.js"></script>
+  
+</body>
+</html>
